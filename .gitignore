@@ -1,4 +1,4 @@
-# Ignore the django environment
+# Ignore the virtual environment
 virtualenv/
 
 # Ignore IDE related files
