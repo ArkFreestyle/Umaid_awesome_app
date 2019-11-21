@@ -1,0 +1,25 @@
+<html>
+
+<head></head>
+
+<body>
+    <div style="text-align: center">
+        <h1>Umaid's awesome app!!!</h1>
+        <h2>Please upload an image:</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input name="name" type="text" placeholder="Name of Image">
+            <input name="image" type="file">
+            <button type="submit">Upload</button>
+        </form>
+
+        {% if image_name != None %}
+            <h3>Image name: {{ image_name }}</h3>
+            <img height=300 src="/media/{{ image }}">
+            <h3>Image prediction: {{ image_prediction }}</h3>
+        {% endif %}
+    </div>
+</body>
+
+</html>
